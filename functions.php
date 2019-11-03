@@ -1,5 +1,11 @@
 <?php
 
+function wpr_admin_styles() {
+    wp_enqueue_style( 'wpr-admin-styles', get_template_directory_uri() . '/assets/css/admin-styles.css' );
+}
+add_action( 'admin_enqueue_scripts', 'wpr_admin_styles' );
+
+
 function wpr_theme_settings() {
 	add_submenu_page(
 		'options-general.php',                 // parent slug
