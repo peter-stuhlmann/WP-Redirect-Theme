@@ -54,7 +54,7 @@ function wpr_url_inputfield() {
 
 function wpr_theme_settings_html() {
     ?>
-    <div>
+    <div class="wrap">
         <h1>WP Redirect (Headless CMS) Settings</h1>
         <p>Please enter the URL to which the visitor should be redirected.</p>
         <form method="POST" action="options.php">

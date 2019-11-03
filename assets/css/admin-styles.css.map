@@ -5,8 +5,8 @@
 		"../scss/admin-styles.css"
 	],
 	"sourcesContent": [
-		""
+		".wpr-input {\n  width: 350px;\n  padding: 3px 5px;\n  box-sizing: border-box;\n}\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,OAAO;EAChB,UAAU,EAAE,UAAU,GACvB"
 }
