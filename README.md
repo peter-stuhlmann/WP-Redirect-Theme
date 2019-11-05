@@ -15,6 +15,12 @@
    Alternatively you can clone the repository or download and unzip it. Then move it via ftp to the directory _wp-content/themes/_.
 3. Go to the theme settings (_Settings_ > _Theme Settings_) and enter here the domain to which the visitor should be redirected, e.g. to your frontend, which you programmed with e.g. React.
 
+## Supported languages
+
+- English
+- German
+- French
+
 ## Changelog
 
 **1.0** &nbsp; Initial Release
