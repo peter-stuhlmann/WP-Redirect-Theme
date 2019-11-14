@@ -7,6 +7,6 @@
     <title><?php bloginfo( 'name' ); ?></title>
   </head>
   <body>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    <?php echo esc_attr(get_option('indexpage-content', '')); ?>
   </body>
 </html>

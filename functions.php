@@ -28,16 +28,31 @@ function wpr_settings_init() {
 		'wp-redirect-theme-settings'           // page
 	);
 
+    // redirect url
     register_setting(
 		'wp-redirect-theme-settings',          // option group
         'redirect-url',                        // option name
         ''                                     // args
     );
-    
 	add_settings_field(
 		'redirect-url',                        // id
-		__('Redirect URL', 'wp-redirect'),   // title
-		'wpr_url_inputfield',                  // callback function
+		__('Redirect URL', 'wp-redirect'),     // title
+		'wpr_form_redirect_url',               // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
+    );
+
+    // index page content
+    register_setting(
+		'wp-redirect-theme-settings',          // option group
+        'indexpage-content',                   // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'indexpage-content',                   // id
+		__('Index page content', 'wp-redirect'), // title
+		'wpr_form_indexpage_content',          // callback function
 		'wp-redirect-theme-settings',          // page
         'wpr-settings-section',                // section
         ''                                     // args
@@ -45,9 +60,15 @@ function wpr_settings_init() {
 }
 
 
-function wpr_url_inputfield() {
-	$url = esc_attr(get_option('redirect-url', '')); ?>
+function wpr_form_redirect_url() {
+    $url = esc_attr(get_option('redirect-url', '')); ?>
     <input class="wpr-input" type="url" name="redirect-url" value="<?php echo $url; ?>">
+    <?php
+}
+
+function wpr_form_indexpage_content() {
+    $textpageContent = esc_attr(get_option('indexpage-content', '')); ?>
+    <textarea class="wpr-textarea" name="indexpage-content"><?php echo $textpageContent; ?></textarea>
     <?php
 }
 
