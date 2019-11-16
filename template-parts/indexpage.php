@@ -7,6 +7,7 @@
     <title><?php bloginfo( 'name' ); ?></title>
   </head>
   <body>
+    <h1><?php echo esc_attr(get_option('indexpage-heading', '')); ?></h1>
     <?php echo esc_attr(get_option('indexpage-content', '')); ?>
-  </body>
+  </body> 
 </html>

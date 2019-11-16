@@ -43,6 +43,21 @@ function wpr_settings_init() {
         ''                                     // args
     );
 
+    // index page heading
+    register_setting(
+		'wp-redirect-theme-settings',          // option group
+        'indexpage-heading',                   // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'indexpage-heading',                   // id
+		__('Index page heading', 'wp-redirect'), // title
+		'wpr_form_indexpage_heading',          // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
+    );
+    
     // index page content
     register_setting(
 		'wp-redirect-theme-settings',          // option group
@@ -62,7 +77,13 @@ function wpr_settings_init() {
 
 function wpr_form_redirect_url() {
     $url = esc_attr(get_option('redirect-url', '')); ?>
-    <input class="wpr-input" type="url" name="redirect-url" value="<?php echo $url; ?>">
+    <input class="wpr-input" type="url" name="redirect-url" value="<?php echo $url; ?>" />
+    <?php
+}
+
+function wpr_form_indexpage_heading() {
+    $textpageHeading = esc_attr(get_option('indexpage-heading', '')); ?>
+    <input class="wpr-input" type="text" name="indexpage-heading" value="<?php echo $textpageContent; ?>" />
     <?php
 }
 
@@ -92,8 +113,8 @@ function wpr_theme_settings_html() {
     </div>
 <?php
 }
-
  
+
 // Translation
 function wpr_theme_setup(){
     load_theme_textdomain('wp-redirect',   get_template_directory() . '/assets/languages');
