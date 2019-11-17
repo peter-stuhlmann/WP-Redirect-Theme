@@ -71,6 +71,21 @@ function wpr_settings_init() {
 		'wp-redirect-theme-settings',          // page
         'wpr-settings-section',                // section
         ''                                     // args
+    );
+    
+    // index page footer
+    register_setting(
+		'wp-redirect-theme-settings',          // option group
+        'indexpage-footer',                    // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'indexpage-footer',                    // id
+		__('Index page footer', 'wp-redirect'), // title
+		'wpr_form_indexpage_footer',           // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
 	);
 }
 
@@ -83,13 +98,19 @@ function wpr_form_redirect_url() {
 
 function wpr_form_indexpage_heading() {
     $textpageHeading = esc_attr(get_option('indexpage-heading', '')); ?>
-    <input class="wpr-input" type="text" name="indexpage-heading" value="<?php echo $textpageContent; ?>" />
+    <input class="wpr-input" type="text" name="indexpage-heading" value="<?php echo $textpageHeading; ?>" />
     <?php
 }
 
 function wpr_form_indexpage_content() {
     $textpageContent = esc_attr(get_option('indexpage-content', '')); ?>
     <textarea class="wpr-textarea" name="indexpage-content"><?php echo $textpageContent; ?></textarea>
+    <?php
+}
+
+function wpr_form_indexpage_footer() {
+    $textpageFooter = esc_attr(get_option('indexpage-footer', '')); ?>
+    <input class="wpr-input" type="text" name="indexpage-footer" value="<?php echo $textpageFooter; ?>" />
     <?php
 }
 

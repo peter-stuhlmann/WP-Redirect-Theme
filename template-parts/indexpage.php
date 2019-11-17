@@ -7,7 +7,14 @@
     <title><?php bloginfo( 'name' ); ?></title>
   </head>
   <body>
-    <h1><?php echo esc_attr(get_option('indexpage-heading', '')); ?></h1>
-    <?php echo esc_attr(get_option('indexpage-content', '')); ?>
+    <header>
+      <h1><?php echo esc_attr(get_option('indexpage-heading', '')); ?></h1>
+    </header>
+    <main>
+      <?php echo esc_attr(get_option('indexpage-content', '')); ?>
+    </main>
+    <footer>
+      <p><?php echo esc_attr(get_option('indexpage-footer', '')); ?></p>
+    </footer>
   </body> 
 </html>
