@@ -174,6 +174,7 @@ function wpr_theme_settings_html() {
                 null                           // other attributes
             )?>
         </form>
+        <p><em>Support the development of this and other web projects with <a href="https://paypal.me/PRStuhlmann/2">your donation</a>.</em></p>
     </div>
 <?php
 }
