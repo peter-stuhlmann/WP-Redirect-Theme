@@ -26,7 +26,22 @@ function wpr_settings_init() {
 		'',                                    // title
 		'',                                    // callback function
 		'wp-redirect-theme-settings'           // page
-	);
+    );
+    
+    // option checkbox
+    register_setting(
+		'wp-redirect-theme-settings',          // option group
+        'wpr-option-checkbox',                 // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'wpr-option-checkbox',                 // id
+		__('Your homepage displays', 'wp-redirect'), // title
+		'wpr_form_option_checkbox',            // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
+    );
 
     // redirect url
     register_setting(
@@ -89,6 +104,12 @@ function wpr_settings_init() {
 	);
 }
 
+function wpr_form_option_checkbox() {
+    ?>
+    <input type="radio" name="wpr-option-checkbox" value="redirect" <?php checked( "redirect", get_option( 'wpr-option-checkbox' ) ); ?> /> Redirect<br />
+    <input type="radio" name="wpr-option-checkbox" value="indexpage" <?php checked( "indexpage", get_option( 'wpr-option-checkbox' ) ); ?> /> Index page
+    <?php 
+}
 
 function wpr_form_redirect_url() {
     $url = esc_attr(get_option('redirect-url', '')); ?>
@@ -119,7 +140,6 @@ function wpr_theme_settings_html() {
     ?>
     <div class="wrap">
         <h1><?php _e('WP Redirect (Headless CMS) Settings', 'wp-redirect');  ?></h1>
-        <p><?php _e('Please enter the URL to which the visitor should be redirected.', 'wp-redirect');  ?></p>
         <form method="POST" action="options.php">
             <?php settings_fields('wp-redirect-theme-settings');?>
             <?php do_settings_sections('wp-redirect-theme-settings')?>
