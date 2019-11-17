@@ -43,6 +43,16 @@ function wpr_settings_init() {
         ''                                     // args
     );
 
+    // redirect url section heading
+	add_settings_field(
+		'redirect-url-section-heading',        // id
+		__('<hr /><h2>Redirect URL</h2>', 'wp-redirect'), // title
+		'redirect_url_section_heading',        // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
+    );
+
     // redirect url
     register_setting(
 		'wp-redirect-theme-settings',          // option group
@@ -53,6 +63,16 @@ function wpr_settings_init() {
 		'redirect-url',                        // id
 		__('Redirect URL', 'wp-redirect'),     // title
 		'wpr_form_redirect_url',               // callback function
+		'wp-redirect-theme-settings',          // page
+        'wpr-settings-section',                // section
+        ''                                     // args
+    );
+
+    // index page section heading
+	add_settings_field(
+		'indexpage-section-heading',           // id
+		__('<hr /><h2>Index page settings</h2>', 'wp-redirect'), // title
+		'indexpage_section_heading',           // callback function
 		'wp-redirect-theme-settings',          // page
         'wpr-settings-section',                // section
         ''                                     // args
@@ -103,6 +123,9 @@ function wpr_settings_init() {
         ''                                     // args
 	);
 }
+
+function redirect_url_section_heading() { }
+function indexpage_section_heading() { }
 
 function wpr_form_option_checkbox() {
     ?>
