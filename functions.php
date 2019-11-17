@@ -106,7 +106,7 @@ function wpr_settings_init() {
 
 function wpr_form_option_checkbox() {
     ?>
-    <input type="radio" name="wpr-option-checkbox" value="redirect" <?php checked( "redirect", get_option( 'wpr-option-checkbox' ) ); ?> /> Redirect<br />
+    <input type="radio" name="wpr-option-checkbox" value="redirect" <?php checked( "redirect", get_option( 'wpr-option-checkbox' ) ); ?> /> Redirect to <?php echo esc_attr(get_option('redirect-url', '')); ?><br />
     <input type="radio" name="wpr-option-checkbox" value="indexpage" <?php checked( "indexpage", get_option( 'wpr-option-checkbox' ) ); ?> /> Index page
     <?php 
 }
