@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Redirect (Headless CMS)\n"
 "Report-Msgid-Bugs-To: Peter R. Stuhlmann <info@peter-stuhlmann.de>\n"
-"POT-Creation-Date: 2019-11-04 19:13+0100\n"
+"POT-Creation-Date: 2019-11-18 22:17+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Peter R. Stuhlmann Webentwicklung\n"
@@ -14,13 +14,14 @@ msgstr ""
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: functions.php:12 functions.php:58
+#: functions.php:12 functions.php:165
 msgid "WP Redirect (Headless CMS) Settings"
 msgstr "WP Redirect (Headless CMS) Einstellungen"
 
@@ -29,9 +30,33 @@ msgid "Theme settings"
 msgstr "Theme-Einstellungen"
 
 #: functions.php:39
+msgid "Your homepage displays"
+msgstr "Startseite"
+
+#: functions.php:49
+msgid "<hr /><h2>Redirect URL</h2>"
+msgstr "<hr /><h2>Weiterleitungs-URL</h2>"
+
+#: functions.php:64
 msgid "Redirect URL"
 msgstr "Weiterleitungs-URL"
 
-#: functions.php:59
-msgid "Please enter the URL to which the visitor should be redirected."
-msgstr "Bitte gib die URL ein, zu der der Besucher weitergeleitet werden soll."
+#: functions.php:74
+msgid "<hr /><h2>Index page settings</h2>"
+msgstr "<hr /><h2>Einstellungen für die Startseite</h2>"
+
+#: functions.php:89
+msgid "Index page heading"
+msgstr "Startseite Überschrift"
+
+#: functions.php:104
+msgid "Index page content"
+msgstr "Startseite Inhalt"
+
+#: functions.php:119
+msgid "Index page footer"
+msgstr "Startseite Footer"
+
+#~ msgid "Please enter the URL to which the visitor should be redirected."
+#~ msgstr ""
+#~ "Bitte gib die URL ein, zu der der Besucher weitergeleitet werden soll."
