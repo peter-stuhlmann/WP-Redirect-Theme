@@ -185,3 +185,6 @@ function wpr_theme_setup(){
     load_theme_textdomain('wp-redirect',   get_template_directory() . '/assets/languages');
 }
 add_action('after_setup_theme', 'wpr_theme_setup');
+
+// This theme uses post thumbnails
+add_theme_support('post-thumbnails');
